@@ -1,0 +1,28 @@
+backend:
+  name: github
+  repo: huhubby5/brand-landing-page   # <-- 必须修改！
+  branch: main
+
+media_folder: "images"
+public_folder: "images"
+
+collections:
+  - name: "pages"
+    label: "页面管理"
+    files:
+      - label: "首页"
+        name: "index"
+        file: "index.html"
+        fields:
+          - { label: "页面内容", name: "body", widget: "code" }
+
+  - name: "products"
+    label: "产品管理"
+    folder: "_products"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "产品名称", name: "title", widget: "string" }
+      - { label: "产品图片", name: "image", widget: "image" }
+      - { label: "产品描述", name: "description", widget: "text" }
+      - { label: "产品链接", name: "link", widget: "string", required: false }

@@ -1,0 +1,29 @@
+backend:
+  name: github
+  repo: huhubby5/brand-landing-page
+  branch: main
+
+site_url: https://aureviass.com
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "Homepage"
+        name: "index"
+        file: "index.html"
+        fields:
+          - { label: "Body", name: "body", widget: "code" }
+
+  - name: "products"
+    label: "Products"
+    folder: "_products"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Link", name: "link", widget: "string", required: false }

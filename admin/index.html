@@ -1,10 +1,29 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Content Manager</title>
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-</head>
-<body></body>
-</html>
+backend:
+  name: git-gateway
+  branch: main
+
+site_url: https://aureviass.com
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "pages"
+    label: "页面管理"
+    files:
+      - label: "首页"
+        name: "index"
+        file: "index.html"
+        fields:
+          - { label: "页面内容", name: "body", widget: "code" }
+
+  - name: "products"
+    label: "产品管理"
+    folder: "_products"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "产品名称", name: "title", widget: "string" }
+      - { label: "产品图片", name: "image", widget: "image" }
+      - { label: "产品描述", name: "description", widget: "text" }
+      - { label: "产品链接", name: "link", widget: "string", required: false }

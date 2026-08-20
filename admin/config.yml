@@ -1,11 +1,9 @@
 backend:
   name: github
+  repo: huhubby5/brand-landing-page
   branch: main
-  identity_url: "https://gentle-semolina-cfbe7f.netlify.app/.netlify/identity"
-  gateway_url: "https://gentle-semolina-cfbe7f.netlify.app/.netlify/git"
 
 site_url: https://aureviass.com
-
 media_folder: "images"
 public_folder: "/images"
 

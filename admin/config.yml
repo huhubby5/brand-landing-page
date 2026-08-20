@@ -1,6 +1,8 @@
 backend:
   name: git-gateway
   branch: main
+  identity_url: "https://gentle-semolina-cfbe7f.netlify.app/.netlify/identity"
+  gateway_url: "https://gentle-semolina-cfbe7f.netlify.app/.netlify/git"
 
 site_url: https://aureviass.com
 
@@ -9,21 +11,21 @@ public_folder: "/images"
 
 collections:
   - name: "pages"
-    label: "页面管理"
+    label: "Pages"
     files:
-      - label: "首页"
+      - label: "Homepage"
         name: "index"
         file: "index.html"
         fields:
-          - { label: "页面内容", name: "body", widget: "code" }
+          - { label: "Body", name: "body", widget: "code" }
 
   - name: "products"
-    label: "产品管理"
+    label: "Products"
     folder: "_products"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "产品名称", name: "title", widget: "string" }
-      - { label: "产品图片", name: "image", widget: "image" }
-      - { label: "产品描述", name: "description", widget: "text" }
-      - { label: "产品链接", name: "link", widget: "string", required: false }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Link", name: "link", widget: "string", required: false }

@@ -1,5 +1,5 @@
 backend:
-  name: git-gateway
+  name: github
   branch: main
   identity_url: "https://gentle-semolina-cfbe7f.netlify.app/.netlify/identity"
   gateway_url: "https://gentle-semolina-cfbe7f.netlify.app/.netlify/git"

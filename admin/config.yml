@@ -1,10 +1,11 @@
 backend:
-  name: github
-  repo: huhubby5/brand-landing-page   # <-- 必须修改！
+  name: git-gateway
   branch: main
 
+site_url: https://aureviass.com
+
 media_folder: "images"
-public_folder: "images"
+public_folder: "/images"
 
 collections:
   - name: "pages"

@@ -2,8 +2,8 @@ backend:
   name: github
   repo: huhubby5/brand-landing-page
   branch: main
-  base_url: https://api.netlify.com
-  site_id: gentle-semolina-cfbe7f.netlify.app
+  auth_type: pkce
+  app_id: Ov23lirzbHSGbr3NT3eR
 
 media_folder: "images"
 public_folder: "/images"
@@ -17,7 +17,6 @@ collections:
         file: "index.html"
         fields:
           - { label: "Body", name: "body", widget: "code" }
-
   - name: "products"
     label: "Products"
     folder: "_products"
